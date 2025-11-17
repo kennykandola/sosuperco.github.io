@@ -22,6 +22,35 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
 
+    <style>
+        body {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            margin: 0;
+        }
+        .content {
+            flex: 1;
+            padding: 2rem;
+        }
+        .pricing {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+        .pricing > div {
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 1.5rem;
+            border-radius: 4px;
+        }
+        .footer {
+            margin-top: auto;
+            padding: 2rem;
+            text-align: center;
+        }
+    </style>
+
 </head>
 
 <body>
@@ -96,7 +125,7 @@
             </div>
         </div>
 
-        <p><a href="mailto:team@sosuper.app">Contact support</a></p>
+        <p><a href="mailto:team@sosuper.app">Contact support (Kenny)</a></p>
 
     </div>
 
