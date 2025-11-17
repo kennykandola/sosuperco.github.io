@@ -1,28 +1,355 @@
 <!DOCTYPE html>
+
 <html lang="en">
+
 <head>
+
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>So Super Apps</title>
+
     <meta name="description" content="Shopfiy apps So Super">
+
     <link rel="stylesheet" href="style.css">
+
     <!-- Google Font -->
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
     <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            font-family: 'Wix Madefor Text', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        .logo {
+            display: block;
+            margin: 0 auto 2rem;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 1rem;
+        }
+        .trial-notice {
+            background-color: #e3f2fd;
+            border-left: 4px solid #2196f3;
+            padding: 1rem;
+            margin: 2rem 0;
+            border-radius: 4px;
+        }
+        .trial-notice h2 {
+            margin-top: 0;
+            color: #1976d2;
+        }
+        .pricing-section {
+            margin: 3rem 0;
+        }
+        .pricing-section h2 {
+            text-align: center;
+            color: #333;
+            margin-bottom: 2rem;
+        }
+        .plans-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+        .plan-card {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .plan-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+        .plan-header {
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 1rem;
+            margin-bottom: 1rem;
+        }
+        .plan-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #333;
+            margin: 0 0 0.5rem 0;
+        }
+        .plan-price {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #2196f3;
+            margin: 0;
+        }
+        .plan-price .period {
+            font-size: 1rem;
+            color: #666;
+            font-weight: 400;
+        }
+        .plan-description {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.6;
+        }
+        .plan-features {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 1.5rem 0;
+        }
+        .plan-features li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        .plan-features li:last-child {
+            border-bottom: none;
+        }
+        .plan-features li:before {
+            content: "✓ ";
+            color: #4caf50;
+            font-weight: bold;
+            margin-right: 0.5rem;
+        }
+        .plan-locations {
+            background-color: #f9f9f9;
+            padding: 1rem;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+        }
+        .plan-locations strong {
+            color: #333;
+        }
+        .trial-badge {
+            display: inline-block;
+            background-color: #4caf50;
+            color: white;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.875rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+        .all-features {
+            background: white;
+            border-radius: 8px;
+            padding: 2rem;
+            margin-top: 3rem;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .all-features h3 {
+            margin-top: 0;
+            color: #333;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .feature-item {
+            padding: 1rem;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+        }
+        .feature-item h4 {
+            margin: 0 0 0.5rem 0;
+            color: #333;
+            font-size: 1rem;
+        }
+        .feature-item p {
+            margin: 0;
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            margin-top: 3rem;
+        }
+        .footer a {
+            color: white;
+            text-decoration: none;
+            margin: 0 1rem;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+        .footer span {
+            display: block;
+            margin-top: 1rem;
+            color: #999;
+        }
+    </style>
+
 </head>
+
 <body>
 
     <div class="content">
+
         <img src="ss-logo-white.png" alt="Logo" class="logo" width="150">
+
         <h1>Shopfiy apps So Super</h1>
+
+        <div class="trial-notice">
+            <h2>🎉 14-Day Free Trial</h2>
+            <p>Your 14-day free trial of the Superer plan starts once you install the app. No credit card required to get started!</p>
+        </div>
+
         <p><a href="https://apps.shopify.com/locations-made-super">Locations So Super for Shopify</a></p>
+
+        <div class="pricing-section">
+            <h2>Choose Your Plan</h2>
+            
+            <div class="plans-grid">
+                <!-- Super Plan -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3 class="plan-name">Super</h3>
+                        <p class="plan-price">$15<span class="period">/month</span></p>
+                    </div>
+                    <p class="plan-description">All the basics for displaying your locations with a map and directory</p>
+                    <div class="plan-locations">
+                        <strong>Up to 100 locations</strong>
+                    </div>
+                    <ul class="plan-features">
+                        <li>Analytics</li>
+                    </ul>
+                </div>
+
+                <!-- Superer Plan -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3 class="plan-name">Superer</h3>
+                        <p class="plan-price">$20<span class="period">/month</span></p>
+                        <span class="trial-badge">14-Day Free Trial</span>
+                    </div>
+                    <p class="plan-description">For those wanting more locations, without the need to edit the themes</p>
+                    <div class="plan-locations">
+                        <strong>Up to 500 locations</strong>
+                    </div>
+                    <ul class="plan-features">
+                        <li>Analytics</li>
+                    </ul>
+                </div>
+
+                <!-- Superest Plan -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3 class="plan-name">Superest</h3>
+                        <p class="plan-price">$45<span class="period">/month</span></p>
+                    </div>
+                    <p class="plan-description">Advanced features for displaying your locations how you want, plus multi-language support</p>
+                    <div class="plan-locations">
+                        <strong>Up to 2,000 locations</strong>
+                    </div>
+                    <ul class="plan-features">
+                        <li>Analytics</li>
+                        <li>Custom themes</li>
+                        <li>Whitelabel</li>
+                        <li>Multi-language support</li>
+                    </ul>
+                </div>
+
+                <!-- Superest Plus Plan -->
+                <div class="plan-card">
+                    <div class="plan-header">
+                        <h3 class="plan-name">Superest Plus</h3>
+                        <p class="plan-price">$75<span class="period">/month</span></p>
+                    </div>
+                    <p class="plan-description">Everything in Superest plus <strong>unlimited locations</strong></p>
+                    <div class="plan-locations">
+                        <strong>Unlimited locations</strong>
+                    </div>
+                    <ul class="plan-features">
+                        <li>Analytics</li>
+                        <li>Custom themes</li>
+                        <li>Whitelabel</li>
+                        <li>Multi-language support</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- All Plans Include Section -->
+            <div class="all-features">
+                <h3>All Plans Include</h3>
+                <div class="features-grid">
+                    <div class="feature-item">
+                        <h4>SEO directory and landing pages</h4>
+                        <p>Automatically create a SEO directory of all your locations, cities and regions</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Map page with search and filter</h4>
+                        <p>Search and filter all your locations with a on a map powered my mapbox</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Tags</h4>
+                        <p>Create tags with images and descriptions and group them</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Opening hours</h4>
+                        <p>Set and display the opening hours for your locations</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Map styles</h4>
+                        <p>Change the look of the maps with a number of preset styles</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Custom fields</h4>
+                        <p>Add any new fields you want, from social links to store manager</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Upload and export with CSV</h4>
+                        <p>Upload and bulk edit your locations.</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Rich snippets</h4>
+                        <p>Help google understand pages better with local business structured data</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Directions and calls</h4>
+                        <p>Visitors can easily get directions and make calls to the locations</p>
+                    </div>
+                    <div class="feature-item">
+                        <h4>Language Support</h4>
+                        <p>Change default language to something other than English. Translation templates provided for 32 major languages for easy setup.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <p><a href="mailto:team@sosuper.app">Contact support (Kenny)</a></p>
+
     </div>
+
     <div class="footer">
+
         <a href="#">Terms</a>
+
         <a href="#">Privacy</a>
+
         <span>© 2024 So Super</span>
+
     </div>
+
 </body>
+
 </html>
