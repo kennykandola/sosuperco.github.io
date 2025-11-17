@@ -1,149 +1,246 @@
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
     <meta charset="UTF-8">
-
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>So Super Apps</title>
-
-    <meta name="description" content="Shopfiy apps So Super">
-
-    <link rel="stylesheet" href="style.css">
-
+    <meta name="description" content="Shopify apps So Super">
     <!-- Google Font -->
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
     <link href="https://fonts.googleapis.com/css2?family=Wix+Madefor+Text:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
-
     <style>
-        html, body {
+        body {
             margin: 0;
             padding: 0;
-        }
-        body {
             min-height: 100vh;
+            background-color: #6720CE; 
             display: flex;
             flex-direction: column;
+            color: white;
+            font-family: "Wix Madefor Text", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .logo {
+            margin-bottom: 20px;
         }
         .content {
-            flex: 1 0 auto;
-            padding: 2rem;
-        }
-        .pricing {
-            display: flex;
-            flex-direction: row;
-            flex-wrap: wrap;
-            gap: 1.5rem;
-            margin: 2rem 0;
-        }
-        .pricing > div {
-            flex: 1 1 250px;
-            border: 1px solid rgba(255, 255, 255, 0.2);
-            padding: 1.5rem;
-            border-radius: 4px;
-        }
-        .footer {
-            flex-shrink: 0;
-            padding: 2rem;
             text-align: center;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 40px 20px;
+            overflow-y: auto;
+        }
+        .content a {
+            color: #99FF99;
+            text-decoration: none;
+        }
+        .button{
+        }
+        
+        /* Pricing Section */
+        .pricing-section {
+            margin-top: 50px;
+            width: 100%;
+            max-width: 1400px;
+        }
+
+        .pricing-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 25px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .pricing-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+
+        .pricing-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        .pricing-card.featured {
+            border-color: #99FF99;
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .plan-name {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .plan-price {
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .plan-price span {
+            font-size: 1rem;
+            font-weight: 400;
+        }
+
+        .plan-features {
+            list-style: none;
+            margin-bottom: 20px;
+        }
+
+        .plan-features li {
+            padding: 8px 0;
+            padding-left: 25px;
+            position: relative;
+            font-size: 0.95rem;
+        }
+
+        .plan-features li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #99FF99;
+            font-weight: bold;
+        }
+
+        .trial-note {
+            text-align: center;
+            font-size: 0.85rem;
+            margin-top: 10px;
+            opacity: 0.9;
+            font-style: italic;
+        }
+
+        .footer {
+            width: 100%;
+            text-align: center;
+            font-size: 0.8rem;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+        }
+        .footer a, .footer span {
+            color: white;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .pricing-grid {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
-
 </head>
-
 <body>
-
-
-
     <div class="content">
-
         <img src="ss-logo-white.png" alt="Logo" class="logo" width="150">
-
-        <h1>Shopfiy apps So Super</h1>
-
+        <h1>Shopify apps So Super</h1>
         <p><a href="https://apps.shopify.com/locations-made-super">Locations So Super for Shopify</a></p>
+        <p><a href="mailto:team@sosuper.app">Contact support</a></p>
 
-        <div class="pricing">
-            <div>
-                <h3>Development</h3>
-                <p>Free</p>
-                <p>Free when in development mode</p>
-                <p>Everything in the Superest plan</p>
-            </div>
+        <!-- Pricing Section -->
+        <div class="pricing-section">
+            <h2>Pricing Plans</h2>
+            <div class="pricing-grid">
+                <!-- Development Plan -->
+                <div class="pricing-card">
+                    <div class="plan-name">Development</div>
+                    <div class="plan-price">Free</div>
+                    <ul class="plan-features">
+                        <li>Free when in development mode</li>
+                        <li>Everything in the Superest plan</li>
+                    </ul>
+                </div>
 
-            <div>
-                <h3>Super</h3>
-                <p>$15 / month</p>
-                <p>100 locations</p>
-                <p>SEO directory pages</p>
-                <p>Tags</p>
-                <p>Custom fields</p>
-                <p>Opening hours</p>
-                <p>Spreadsheet import</p>
-                <p>Edit theme style</p>
-            </div>
+                <!-- Super Plan -->
+                <div class="pricing-card">
+                    <div class="plan-name">Super</div>
+                    <div class="plan-price">$15<span>/month</span></div>
+                    <ul class="plan-features">
+                        <li>100 locations</li>
+                        <li>SEO directory pages</li>
+                        <li>Tags</li>
+                        <li>Custom fields</li>
+                        <li>Opening hours</li>
+                        <li>Spreadsheet import</li>
+                        <li>Edit theme style</li>
+                    </ul>
+                </div>
 
-            <div>
-                <h3>Superer</h3>
-                <p>$20 / month</p>
-                <p>14-Day Free Trial</p>
-                <p>500 locations</p>
-                <p>SEO directory pages</p>
-                <p>Tags</p>
-                <p>Custom fields</p>
-                <p>Opening hours</p>
-                <p>Spreadsheet import</p>
-                <p>Edit theme style</p>
-            </div>
+                <!-- Superer Plan -->
+                <div class="pricing-card">
+                    <div class="plan-name">Superer</div>
+                    <div class="plan-price">$20<span>/month</span></div>
+                    <ul class="plan-features">
+                        <li>500 locations</li>
+                        <li>SEO directory pages</li>
+                        <li>Tags</li>
+                        <li>Custom fields</li>
+                        <li>Opening hours</li>
+                        <li>Spreadsheet import</li>
+                        <li>Edit theme style</li>
+                    </ul>
+                </div>
 
-            <div>
-                <h3>Superest</h3>
-                <p>$45 / month</p>
-                <p>2000 locations</p>
-                <p>SEO directory pages</p>
-                <p>Tags</p>
-                <p>Custom fields</p>
-                <p>Opening hours</p>
-                <p>Spreadsheet import</p>
-                <p>Edit theme style & liquid templates</p>
-                <p>Multi-Language Support</p>
-            </div>
+                <!-- Superest Plan -->
+                <div class="pricing-card featured">
+                    <div class="plan-name">Superest</div>
+                    <div class="plan-price">$45<span>/month</span></div>
+                    <ul class="plan-features">
+                        <li>2000 locations</li>
+                        <li>SEO directory pages</li>
+                        <li>Tags</li>
+                        <li>Custom fields</li>
+                        <li>Opening hours</li>
+                        <li>Spreadsheet import</li>
+                        <li>Edit theme style & liquid templates</li>
+                        <li>Multi-Language Support</li>
+                    </ul>
+                    <div class="trial-note">14-day free trial begins on initial install</div>
+                </div>
 
-            <div>
-                <h3>Superest Plus</h3>
-                <p>$75 / month</p>
-                <p>Unlimited locations</p>
-                <p>SEO directory pages</p>
-                <p>Tags</p>
-                <p>Custom fields</p>
-                <p>Opening hours</p>
-                <p>Spreadsheet import</p>
-                <p>Edit theme style & liquid templates</p>
-                <p>Multi-Language Support</p>
+                <!-- Superest Plus Plan -->
+                <div class="pricing-card featured">
+                    <div class="plan-name">Superest Plus</div>
+                    <div class="plan-price">$75<span>/month</span></div>
+                    <ul class="plan-features">
+                        <li>Unlimited locations</li>
+                        <li>Analytics</li>
+                        <li>Custom themes</li>
+                        <li>Whitelabel</li>
+                        <li>Multi-language support</li>
+                        <li>Everything in Superest</li>
+                    </ul>
+                </div>
             </div>
         </div>
-
-        <p><a href="mailto:team@sosuper.app">Contact support (Kenny)</a></p>
-
     </div>
 
     <div class="footer">
-
         <a href="#">Terms</a>
-
         <a href="#">Privacy</a>
-
         <span>© 2024 So Super</span>
-
     </div>
-
 </body>
-
 </html>
